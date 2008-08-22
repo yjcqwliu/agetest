@@ -35,7 +35,7 @@ def index
 			end 
 		end
 	end 
-	@notice="<center><h3>你的心里年龄是:#{n}</h3></center><br>#{m}"
+	@notice="<center><h3>你的心里年龄是:#{n}</h3></center><br>#{m}<br><a href=""http://apps.xiaonei.com/xiaoneicss/index.asp"" target=""_blank"">恭喜你，获取校内模板一份</a>"
   end 
 end 
 def invite
