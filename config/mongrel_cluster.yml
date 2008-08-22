@@ -1,5 +1,5 @@
 --- 
-cwd: "/u/apps/assassin/current"
+cwd: "/u/apps/agetest/current"
 environment: production
 log_file: log/mongrel.log
 port: 5000
