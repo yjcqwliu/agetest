@@ -3,7 +3,12 @@ def index
   action=params[:act]
   
   if action then
+     
     n=params[:n].to_i
+	ids=params[:ids]
+	if ids.length != 5 then
+	xn_redirect_to("home/invite?age=#{n}")
+	end 
 	
 	@current_user.age=n
 	@current_user.sent=false
@@ -35,13 +40,13 @@ def index
 			end 
 		end
 	end 
-	@notice="<center><h3>你的心里年龄是:#{n}</h3></center><br>#{m}<br><a href=\"http://apps.xiaonei.com/xiaoneicss/index.asp\" target=\"_blank\">恭喜你，获取校内模板一份</a>"
+	@notice="<center><h3>你的心里年龄是:#{n}</h3></center><br>#{m}<br><a href=\"http://fend.cn\" target=\"_blank\">恭喜你，获取校内模板一份</a>"
   end 
 end 
 def invite
 	
 	
-	@age=2
+	@age=params[:age].to_i || 2
 	params.each do |key, value|
 		tmp_arr = key.split("_")
 		
@@ -50,8 +55,8 @@ def invite
 		end
 	end 
 
-	if @age<12 then 
-		@age+=6
+	if @age < 12 then 
+		@age += 6
 	end 
 	
 end 
