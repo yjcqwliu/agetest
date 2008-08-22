@@ -2,7 +2,7 @@ require 'mongrel_cluster/recipes'
 
 set :application, "agetest"
 set :scm, "git"
-set :repository,  "git://github.com/yjcqwliu/agetest.git"
+set :repository,  "git@github.com:yjcqwliu/agetest.git"
 set :branch, "master"
 set :user, "beautypk"
 set :use_sudo, false
