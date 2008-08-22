@@ -4,7 +4,7 @@ set :application, "agetest"
 set :scm, "git"
 set :repository,  "git@github.com:yjcqwliu/agetest.git"
 set :branch, "master"
-set :user, "beautypk"
+set :user, "agetest"
 set :use_sudo, false
 set :mongrel_conf, "#{current_path}/config/mongrel_cluster.yml"
 
