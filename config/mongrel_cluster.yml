@@ -1,4 +1,6 @@
 --- 
+cwd: "/u/apps/assassin/current"
+environment: production
 log_file: log/mongrel.log
 port: 5000
 pid_file: tmp/pids/mongrel.pid
