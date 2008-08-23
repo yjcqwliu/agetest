@@ -3,7 +3,7 @@ current_time = Time.now
 User.find(:all,:order => " updated_at desc ").each do |user|
   begin
     notifications = [
-                    "<a href='http://apps.xiaonei.com/beautypk/homes/show'>诚邀您安装美容达人PK赛，这里有你不知道的美容问题，并且有大牌的实物化妆品赠送！</a>"
+                    "<a href='http://www.jiyiri.com/adindex.aspx?adid=de8c627e08e09045890a81602a79954c82fd'>还在为记不住恋人、亲人、朋友的生日发愁吗？诚邀您安记忆日，不再忘记亲友生日，免费邮件和短信提醒</a>"
                     ]
     res_note = user.xn_session.invoke_method("xiaonei.notifications.send", 
                                                     :to_ids => [user.xid].join(","), 
