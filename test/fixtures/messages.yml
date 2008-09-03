@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  user_xid: 1
+  target_xid: 1
+  message: MyString
+  notified: false
+
+two:
+  user_id: 1
+  user_xid: 1
+  target_xid: 1
+  message: MyString
+  notified: false

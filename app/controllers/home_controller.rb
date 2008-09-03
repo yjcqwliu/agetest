@@ -60,4 +60,21 @@ def invite
 	end 
 	
 end 
+def friends
+    @friends=User.find(:all,
+	                   :conditions =>[ " xid in (?) " , @current_user.friend_ids ],
+					   :order => " updated_at desc "
+					  )
+end
+
+def me
+    @friends=[@current_user]
+	render :action => "friends"
+end 
+
+def add_message
+    Message.create(params[:message].merge(:user => current_user))
+    xn_redirect_to("home/friends")
+
+  end
 end

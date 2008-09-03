@@ -1,0 +1,18 @@
+<div style="width:650px;clear:both">
+  <div style="text-align:center;padding:30px;float:left;width:100px;height:178px;background-image:url(http://fmn005.xnimg.cn/fmn005/pic001/20080808/08/27/large_161a65.jpg)">
+    <xn:profile-pic uid="<%= friend.xid %>" size="normal" linked="true"/>
+    <xn:name uid="<%= friend.xid %>" linked="true"/>
+  </div>
+  <div class="highlight yellow" style="text-align:center;float:left;width:310px;" >
+    <br>
+    <span class="highlight-border"><br/>
+      <center>
+        <form action="friends/<%= friend.id %>/add_message">
+          <input name="message[message]" size="35"/><br/><br/>
+          <input name="submit" type="submit" value="我也来祝福" class="inputsubmit" /> 
+        </form>
+      </center>
+    </span>
+  </div>
+ 
+</div>
