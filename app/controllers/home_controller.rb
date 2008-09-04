@@ -62,14 +62,14 @@ def invite
 end 
 def friends
     @friends=User.find(:all,
-	                   :conditions =>[ " xid in (?) " , @current_user.friend_ids ],
+	                   :conditions =>[ " xid in (?) and age >6 " , @current_user.friend_ids ],
 					   :order => " updated_at desc "
 					  )
 
 end
 
 def me
-    if current_user.age > 0 then
+    if current_user.age && current_user.age > 0 then
 		@friends=[@current_user]
 	else
 		@friends=nil
@@ -100,7 +100,7 @@ def add_message
 	user = User.find(params[:id])
     message=user.messages.create(params[:message])
 	message.user_xid=current_user.xid
-	message.noticed=false
+	message.notified=false
 	message.save
     xn_redirect_to("home/friends")
 
