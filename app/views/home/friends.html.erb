@@ -11,7 +11,7 @@
     <span class="highlight-border"><br/>
       <center>
 	    <%= render :partial => 'message', :collection => friend.messages -%>
-        <form action="home/add_message?id=<%= friend.id %>&xid=<%= friend.xid %>">
+        <form action="home/add_message?id=<%= friend.id %>&xid=<%= friend.xid %>&act=<%= controller.action_name%>">
           <input name="message[message]" size="35"/><br/><br/>
           <input name="submit" type="submit" value="对他的心理年龄发表几句看法" class="inputsubmit" /> 
         </form>

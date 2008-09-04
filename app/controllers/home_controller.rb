@@ -6,7 +6,7 @@ def index
      
     n=params[:n].to_i
 	ids=params[:ids]
-	if (ids && ids.length != 1) || !ids then
+	if (ids && ids.length == 0) || !ids then
 	xn_redirect_to("home/invite?age=#{n}")
 	end 
 	
@@ -77,16 +77,20 @@ def me
 	render :action => "friends"
 end
  
-def order
-    if params[:order] == "1" then
-		order_asc=" asc "
-	else
-		order_asc=" desc "
-	end 
+def orderdesc
     @friends=User.find(:all,
 	                   :limit => 100 ,
 					   :conditions =>[" age >0 "],
-					   :order => " age #{order_asc} "
+					   :order => " age desc "
+					  )
+	render :action => "friends"
+end 
+
+def orderasc
+    @friends=User.find(:all,
+	                   :limit => 100 ,
+					   :conditions =>[" age >0 "],
+					   :order => " age asc "
 					  )
 	render :action => "friends"
 end 
@@ -97,14 +101,17 @@ def add_message
 	#message.user=current_user
 	#message.target_xid=params[:id]
 	#message.save
-	user = User.find(params[:id])
-    message=user.messages.new(params[:message])
-	message.user_xid=current_user.xid
-	message.target_xid=params[:xid]
-	message.from_id=current_user.id
-	message.notified=false
-	message.save
-    xn_redirect_to("home/friends")
+	if params[:id] then
+		user = User.find(params[:id])
+		message=user.messages.new(params[:message])
+		message.user_xid=current_user.xid
+		message.target_xid=params[:xid]
+		message.from_id=current_user.id
+		message.notified=false
+		message.save
+	end
+	#render :text => params[:act] 
+    xn_redirect_to("home/#{params[:act]}")
 
   end
 end
