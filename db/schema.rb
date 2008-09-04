@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080828040107) do
+ActiveRecord::Schema.define(:version => 20080904004247) do
 
   create_table "friendtests", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20080828040107) do
     t.boolean  "notified"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "from_id",    :limit => 11
   end
 
   create_table "users", :force => true do |t|
