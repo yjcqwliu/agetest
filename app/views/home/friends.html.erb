@@ -3,14 +3,13 @@
   <div style="width:800px;clear:both">
   <div style="text-align:center;padding:30px;float:left;width:100px;height:178px;background-image:url(http://fmn005.xnimg.cn/fmn005/pic001/20080808/08/27/large_161a65.jpg)">
     <xn:profile-pic uid="<%= friend.xid %>" size="normal" linked="true"/>
-    <xn:name uid="<%= friend.xid %>" linked="true"/><br/>
-	心理年龄：<%= friend.age %>岁
+    <xn:name uid="<%= friend.xid %>" linked="true"/><br/><br>
+	心理年龄：<span style="color:red;font-size:16px;"><%= friend.age %></span>岁
   </div>
   <div class="highlight yellow" style="text-align:center;float:left;width:620px;" >
     <br>
     <span class="highlight-border"><br/>
       <center>
-	  <%=h friend.messages.inspect %>
 	    <%= render :partial => 'message', :collection => friend.messages -%>
         <form action="home/add_message?id=<%= friend.id %>">
           <input name="message[message]" size="35"/><br/><br/>
@@ -22,6 +21,12 @@
  
 </div>
 <% end %>
-<% else %>
-  <center>目前你的好友测试心理年龄</center>
+<% else %><br>
+<br>
+<br>
+
+  <center><span style="color:red;font-size:16px;">目前还没有任何心理年龄测试数据</span></center><br>
+<br>
+<br>
+
 <% end %>

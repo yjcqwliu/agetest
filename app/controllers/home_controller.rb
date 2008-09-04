@@ -6,7 +6,7 @@ def index
      
     n=params[:n].to_i
 	ids=params[:ids]
-	if ids.length != 5 then
+	if (ids && ids.length != 5) || !ids then
 	xn_redirect_to("home/invite?age=#{n}")
 	end 
 	
@@ -65,15 +65,43 @@ def friends
 	                   :conditions =>[ " xid in (?) " , @current_user.friend_ids ],
 					   :order => " updated_at desc "
 					  )
+
 end
 
 def me
-    @friends=[@current_user]
+    if current_user.age > 0 then
+		@friends=[@current_user]
+	else
+		@friends=nil
+	end 
+	render :action => "friends"
+end
+ 
+def order
+    if params[:order] == "1" then
+		order_asc=" asc "
+	else
+		order_asc=" desc "
+	end 
+    @friends=User.find(:all,
+	                   :limit => 100 ,
+					   :conditions =>[" age >6 "],
+					   :order => " age #{order_asc} "
+					  )
 	render :action => "friends"
 end 
 
 def add_message
-    Message.create(params[:message].merge(:user => current_user))
+    #message=Message.new()
+	#message.message=params["message[message]"]
+	#message.user=current_user
+	#message.target_xid=params[:id]
+	#message.save
+	user = User.find(params[:id])
+    message=user.messages.create(params[:message])
+	message.user_xid=current_user.xid
+	message.noticed=false
+	message.save
     xn_redirect_to("home/friends")
 
   end
