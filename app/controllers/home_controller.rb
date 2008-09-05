@@ -79,7 +79,7 @@ end
  
 def orderdesc
     @friends=User.find(:all,
-	                   :limit => 100 ,
+	                   :limit => 10 ,
 					   :conditions =>[" age >0 "],
 					   :order => " age desc "
 					  )
@@ -88,7 +88,7 @@ end
 
 def orderasc
     @friends=User.find(:all,
-	                   :limit => 100 ,
+	                   :limit => 10 ,
 					   :conditions =>[" age >0 "],
 					   :order => " age asc "
 					  )
