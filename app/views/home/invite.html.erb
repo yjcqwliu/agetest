@@ -1,9 +1,5 @@
 <h3>你需要先邀请5个好友才能看到结果哦^_^</h3>
 <xn:invite-form action="home/index?n=<%= @age %>&act=post">
-  <xn:multi-friend-selector max="5" exclude_ids="<%
-  @current_user.friend_ids.each do |userid|
-  if User.find(:all,:conditions => [" xid = ? ",userid]).length != 0 then -%><%= "#{userid}," -%><% end 
-  end 
-  -%>" />
+  <xn:multi-friend-selector max="5" />
   <input type="submit" class="inputsubmit" value="邀请好友安装"/>
 </xn:invite-form>
