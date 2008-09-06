@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080904004247) do
+ActiveRecord::Schema.define(:version => 20080906012947) do
 
   create_table "friendtests", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -42,5 +42,7 @@ ActiveRecord::Schema.define(:version => 20080904004247) do
     t.boolean  "sent"
     t.text     "friend_ids"
   end
+
+  add_index "users", ["xid", "age"], :name => "index_users_on_xid_and_age"
 
 end
