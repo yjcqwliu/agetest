@@ -69,10 +69,18 @@ def friends
 end
 
 def me
-    if current_user.age && current_user.age > 0 then
-		@friends=[@current_user]
-	else
-		@friends=nil
+    ids = params[:ids] || []
+	if ids.length > 0 then 
+	       @friends=User.find(:all,
+	                   :conditions =>[ " xid in (?) and age >0 " , ids ],
+					   :order => " updated_at desc "
+					  )
+	else	
+		if current_user.age && current_user.age > 0 then
+			@friends=[@current_user]
+		else
+			@friends=nil
+		end 
 	end 
 	render :action => "friends"
 end
@@ -111,7 +119,7 @@ def add_message
 		message.save
 	end
 	#render :text => params[:act] 
-    xn_redirect_to("home/#{params[:act]}")
+    xn_redirect_to("home/#{params[:act]}?ids=#{params[:xid]}")
 
   end
 end
