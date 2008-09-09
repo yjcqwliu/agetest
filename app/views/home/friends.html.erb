@@ -1,6 +1,20 @@
 <% if @friends && @friends.length > 0 %>
+
+<div>
+ 	<center>
+  <%if @page.to_i > 1 then %>
+    <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+  <% end %>
+  &nbsp;
+  <%if @friends.length > 1 && @page.to_i < @friends.total_pages then %>
+    <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+  <% end %>
+</center>
+</div>
+<div style="width:800px;clear:both">
+
   <% @friends.each do |friend| %>
-  <div style="width:800px;clear:both">
+  
   <div style="text-align:center;padding:30px;float:left;width:100px;height:178px;background-image:url(http://fmn005.xnimg.cn/fmn005/pic001/20080808/08/27/large_161a65.jpg)">
     <xn:profile-pic uid="<%= friend.xid %>" size="normal" linked="true"/>
     <xn:name uid="<%= friend.xid %>" linked="true"/><br/><br>
@@ -9,6 +23,7 @@
   <div class="highlight yellow" style="text-align:center;float:left;width:620px;" >
     <br>
     <span class="highlight-border"><br/>
+
       <center>
 	    <%= render :partial => 'message', :collection => friend.messages -%>
         <form action="home/add_message?id=<%= friend.id %>&xid=<%= friend.xid %>&act=<%= controller.action_name%>">
@@ -16,11 +31,24 @@
           <input name="submit" type="submit" value="对他的心理年龄发表几句看法" class="inputsubmit" /> 
         </form>
       </center>
+
     </span>
   </div>
  
-</div>
+
 <% end %>
+</div>
+ <div>
+ 	<center>
+  <%if @page.to_i > 1 then %>
+    <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+  <% end %>
+  &nbsp;
+  <%if @friends.length > 1 && @page.to_i < @friends.total_pages then %>
+    <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+  <% end %>
+</center>
+</div>
 <% else %><br>
 <br>
 <br>

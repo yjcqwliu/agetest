@@ -21520,3 +21520,1732 @@ Rendered home/_message (0.00000)
 Rendered home/_message (0.00000)
 Rendered home/_message (0.00000)
 Completed in 0.06300 (15 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing FriendtestController#index (for 127.0.0.1 at 2008-09-10 01:04:08) [POST]
+  Session ID: 7a5332e8c9b392f86b9432d90a085f80
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220979851346", "action"=>"index", "controller"=>"friendtest", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mSQL (0.140000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.422000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.109000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.032000)[0m   [0;1mUPDATE `users` SET `session_key` = 'FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263', `updated_at` = '2008-09-09 17:04:09' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.203000)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering friendtest/index
+Completed in 0.85900 (1 reqs/sec) | Rendering: 0.06200 (7%) | DB: 0.90600 (105%) | 200 OK [http://61.172.255.117/friendtest/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-09-10 01:04:18) [POST]
+  Session ID: 7df8f7fcefab17943aa97ba4cb294eef
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220979861635", "action"=>"index", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.04700 (60%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/index]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:04:24) [POST]
+  Session ID: 7d7b2924e442bad4dbb4f0ab4e6da7de
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220979867958", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+
+
+NoMethodError (undefined method `paginate' for #<Array:0x44d1238>):
+    /app/controllers/home_controller.rb:95:in `orderdesc'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:07:19) [POST]
+  Session ID: 3ccf3f8a8fe9b9c53164908e208be78b
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980042508", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.016000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+
+
+NoMethodError (undefined method `paginate' for #<Array:0x485ca4c>):
+    /app/controllers/home_controller.rb:95:in `orderdesc'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:10:46) [POST]
+  Session ID: 7f6beaad09254783e992dbe9062cb446
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980249881", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.031000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+
+
+NoMethodError (undefined method `paginate' for #<Array:0x4767e48>):
+    /app/controllers/home_controller.rb:95:in `orderdesc'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:11:00) [POST]
+  Session ID: 52aa57728b08259d4a35ba1e024dae55
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980262123", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.total_pages) on line #19 of home/friends.html.erb:
+16:     上一页
+17:   <% end %>
+18:   &nbsp;
+19:   <%if @page.to_i < @users.total_pages then %>
+20:     <%= link_to "下一页", {:controller => :user, :action => :matchmacker, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+21:   <% else %>
+22:     下一页
+
+    app/views/home/friends.html.erb:19:in `_run_erb_47app47views47home47friends46html46erb'
+    app/views/home/friends.html.erb:2:in `each'
+    app/views/home/friends.html.erb:2:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:96:in `orderdesc'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:13:31) [POST]
+  Session ID: 49a1544cca0f5cabbd682019f7307bb9
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980415015", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.047000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.047000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.total_pages) on line #39 of home/friends.html.erb:
+36:     上一页
+37:   <% end %>
+38:   &nbsp;
+39:   <%if @page.to_i < @users.total_pages then %>
+40:     <%= link_to "下一页", {:controller => :user, :action => :matchmacker, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+41:   <% else %>
+42:     下一页
+
+    app/views/home/friends.html.erb:39:in `_run_erb_47app47views47home47friends46html46erb'
+    app/views/home/friends.html.erb:2:in `each'
+    app/views/home/friends.html.erb:2:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:96:in `orderdesc'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:13:53) [POST]
+  Session ID: b5aa6111d07bbcb5191fb5cf080749d0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980436390", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.07900 (12 reqs/sec) | Rendering: 0.04700 (59%) | DB: 0.09400 (118%) | 200 OK [http://61.172.255.117/home/orderdesc]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:15:55) [POST]
+  Session ID: fe2f2d9de55f0ef9bda09f82b7feea1b
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980558943", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/orderdesc]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:16:17) [POST]
+  Session ID: 26d46927a051da6e1c7f80edc948a6c0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980580293", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.016000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01500)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.03100 (50%) | DB: 0.01600 (25%) | 200 OK [http://61.172.255.117/home/orderdesc]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:17:34) [POST]
+  Session ID: 9df3a37011480f73ad76f4d2e0d83dcb
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980657435", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.015000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.03200 (41%) | DB: 0.03000 (38%) | 200 OK [http://61.172.255.117/home/orderdesc]
+
+
+Processing HomeController#orderasc (for 127.0.0.1 at 2008-09-10 01:17:46) [POST]
+  Session ID: b170504e0a922a5c1bf5ebae493a3fa9
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980669985", "action"=>"orderasc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age asc LIMIT 10[0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.015000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.01600 (25%) | DB: 0.01500 (24%) | 200 OK [http://61.172.255.117/home/orderasc]
+
+
+Processing HomeController#orderasc (for 127.0.0.1 at 2008-09-10 01:21:46) [POST]
+  Session ID: f3df802e055c204f07e7642d67e441e0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980909492", "action"=>"orderasc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age asc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.07800 (83%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/orderasc]
+
+
+Processing HomeController#orderasc (for 127.0.0.1 at 2008-09-10 01:22:15) [POST]
+  Session ID: be3ddcb738c0e81b15c609b6b429e428
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980938609", "action"=>"orderasc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.016000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age asc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.04700 (50%) | DB: 0.01600 (17%) | 200 OK [http://61.172.255.117/home/orderasc]
+
+
+Processing HomeController#orderasc (for 127.0.0.1 at 2008-09-10 01:22:29) [POST]
+  Session ID: afb503a1c81ee6782e82546d879cc932
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220980952330", "action"=>"orderasc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age asc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;36;1mMessage Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;36;1mMessage Load (0.000000)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.04600 (58%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/orderasc]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:22:33) [POST]
+  Session ID: ceb56ce8d8c266a32a23d559ff97a6f9
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"229615263", "xn_sig_time"=>"1220980957028", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x48300a0>) on line #9 of home/friends.html.erb:
+6:     <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+7:   <% end %>
+8:   &nbsp;
+9:   <%if @page.to_i < @friends.total_pages then %>
+10:     <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+11:   <% end %>
+12: </center>
+
+    app/views/home/friends.html.erb:9:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:85:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:22:54) [POST]
+  Session ID: 14317bb034de598efeda1f8402d99dac
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"229615263", "xn_sig_time"=>"1220980977852", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x48f425c>) on line #9 of home/friends.html.erb:
+6:     <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+7:   <% end %>
+8:   &nbsp;
+9:   <%if @page.to_i < @friends.total_pages then %>
+10:     <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+11:   <% end %>
+12: </center>
+
+    app/views/home/friends.html.erb:9:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:85:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:23:01) [POST]
+  Session ID: f98d72efe4396cc754ab8458eb15d122
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220980984311", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x472c230>) on line #9 of home/friends.html.erb:
+6:     <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+7:   <% end %>
+8:   &nbsp;
+9:   <%if @page.to_i < @friends.total_pages then %>
+10:     <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+11:   <% end %>
+12: </center>
+
+    app/views/home/friends.html.erb:9:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:85:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:25:31) [POST]
+  Session ID: 22db6df730a1607a9c1974839cd9b7ff
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981135163", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.016000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:838:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /app/controllers/home_controller.rb:86:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:26:11) [POST]
+  Session ID: 5d8e5ec90741143ca24f8f08337bf2c7
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981174445", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.000000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:28:10) [POST]
+  Session ID: 158619228e966f6899795215567974fe
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981293398", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/me
+
+
+ActionView::MissingTemplate (Missing template home/me.html.erb in view path D:/ruby/rails_apps/my/agetest/app/views):
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:85:in `raise_missing_template_exception'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:78:in `set_extension_and_file_name'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:15:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:28:18) [POST]
+  Session ID: b262bee6ab9efdf593b52fea8ad20c35
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981301658", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;35;1mUser Columns (0.015000)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+
+
+ActionView::TemplateError (undefined method `total_pages' for #<Array:0x480f9f4>) on line #9 of home/friends.html.erb:
+6:     <%= link_to "上一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i - 1)}, {:class => "chn"} %>
+7:   <% end %>
+8:   &nbsp;
+9:   <%if @page.to_i < @friends.total_pages then %>
+10:     <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+11:   <% end %>
+12: </center>
+
+    app/views/home/friends.html.erb:9:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:88:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:31:00) [POST]
+  Session ID: 446b5a908254a07a63b3be4cf9ffb560
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981463202", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for :ids:Symbol) on line #2 of home/_message.html.erb:
+1: <center>
+2:   <%= link_to "<xn:name uid=\"#{message.user_xid}\" />", {:controller => :home, :action => :me, :page => (@page.to_i - 1),:params => {:ids[] => message.user_xid}}, {:class => "chn"} -%>: 
+3:   <span><%=h message.message -%></span>
+4: </center>
+5: 
+
+    app/views/home/_message.html.erb:2:in `_run_erb_47app47views47home47_message46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:20:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:19:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:28:in `render_member'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:142:in `render_partial_collection_with_known_partial_path'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_collection.rb:274:in `method_missing_without_paginate'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:175:in `method_missing'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:175:in `map'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:175:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:175:in `method_missing'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_collection.rb:274:in `method_missing_without_paginate'
+    vendor/plugins/will_paginate/lib/will_paginate/finder.rb:164:in `method_missing'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:141:in `render_partial_collection_with_known_partial_path'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:135:in `render_partial_collection'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:271:in `render'
+    app/views/home/friends.html.erb:28:in `_run_erb_47app47views47home47friends46html46erb'
+    app/views/home/friends.html.erb:16:in `each'
+    app/views/home/friends.html.erb:16:in `_run_erb_47app47views47home47friends46html46erb'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/home_controller.rb:85:in `me'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:76:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/rails.rb:74:in `process'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    D:/ruby/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/ruby/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/ruby/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:31:30) [POST]
+  Session ID: 78f3a0820a3eb02dc531cc791fb9967d
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>["229615263"], "xn_sig_time"=>"1220981494158", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.015000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01500)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.04700 (75%) | DB: 0.01500 (24%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:31:35) [POST]
+  Session ID: a06c4f22d5829121c1bfceeb26437da0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220981499170", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01500)
+Rendered home/_message (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.06200 (79%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/orderdesc]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:31:38) [POST]
+  Session ID: d6751ad038b0ba03441d8a60387dd1bc
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"242977226", "xn_sig_time"=>"1220981501404", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('242977226') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01500)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.04700 (75%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:31:42) [POST]
+  Session ID: cfc23f2c4e30fbf25b77316d2a4228e0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"229615263", "xn_sig_time"=>"1220981506126", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"-1", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('229615263') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.03100 (50%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:31:44) [POST]
+  Session ID: ff7168c4011a77e0bace79a8f7723ab0
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"242977226", "xn_sig_time"=>"1220981508017", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"-1", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('242977226') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.06200 (79%) | DB: 0.01600 (20%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:32:22) [POST]
+  Session ID: 62c87aff773210890dbf5053d49227a1
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"242977226", "xn_sig_time"=>"1220981545515", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"-1", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('242977226') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.12500)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.18700 (5 reqs/sec) | Rendering: 0.15600 (83%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:32:36) [POST]
+  Session ID: 2692b496ac621524d3b94915f8dd7fd1
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"242977226", "xn_sig_time"=>"1220981560179", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"-1", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('242977226') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.015000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01600)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.03200 (50%) | DB: 0.01500 (23%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#me (for 127.0.0.1 at 2008-09-10 01:32:42) [POST]
+  Session ID: 100fb74e7ac172cb4b1e894b42c1e54f
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "ids"=>"242977226", "xn_sig_time"=>"1220981565362", "action"=>"me", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "page"=>"-1", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( xid in ('242977226') and age >0 ) ORDER BY updated_at desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.04600 (74%) | DB: 0.01600 (25%) | 200 OK [http://61.172.255.117/home/me]
+
+
+Processing HomeController#orderdesc (for 127.0.0.1 at 2008-09-10 01:32:45) [POST]
+  Session ID: 184aac8ceb5709103cd71cb39ca66dad
+  Parameters: {"xn_sig_expires"=>"0", "xn_sig_session_key"=>"FZNxN0wc1NDyzIaGwIA1r8Z+e3jKQB0WOhKLgeiLallX4fCPI+gVhclp5nTcoGVA-229615263", "xn_sig_user"=>"229615263", "xn_sig_method"=>"get", "xn_sig_time"=>"1220981569222", "action"=>"orderdesc", "controller"=>"home", "xn_sig_api_key"=>"8528a4a80ceb4febb3df66cb4d8f1f14", "xn_sig_in_iframe"=>"0", "xn_sig_added"=>"1"}
+  [4;36;1mUser Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`xid` = 229615263) LIMIT 1[0m
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE ( age >0 ) ORDER BY age desc [0m
+Rendering template within layouts/application
+Rendering home/friends
+  [4;35;1mMessage Columns (0.000000)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 2) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 2) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.01500)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.user_id = 3) [0m
+  [4;35;1mMessage Load (0.000000)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 3) [0m
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Rendered home/_message (0.00000)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.06200 (79%) | DB: 0.00000 (0%) | 200 OK [http://61.172.255.117/home/orderdesc]

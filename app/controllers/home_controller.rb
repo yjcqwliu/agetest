@@ -79,27 +79,30 @@ def me
 		if current_user.age && current_user.age > 0 then
 			@friends=[@current_user]
 		else
-			@friends=nil
+			@friends=[]
 		end 
 	end 
 	render :action => "friends"
 end
  
 def orderdesc
-    @friends=User.find(:all,
-	                   :limit => 10 ,
+    @page = 1
+    @friends = User.find(:all,
 					   :conditions =>[" age >0 "],
 					   :order => " age desc "
 					  )
+	@friends = @friends.paginate(:page => @page, :per_page => 50)
 	render :action => "friends"
+	
 end 
 
 def orderasc
+    @page = 1
     @friends=User.find(:all,
-	                   :limit => 10 ,
 					   :conditions =>[" age >0 "],
 					   :order => " age asc "
 					  )
+	@friends = @friends.paginate(:page => @page, :per_page => 50)
 	render :action => "friends"
 end 
 
