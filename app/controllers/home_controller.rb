@@ -89,6 +89,7 @@ def orderdesc
     @page = 1
     @friends = User.find(:all,
 					   :conditions =>[" age >0 "],
+					   :limit => 500,
 					   :order => " age desc "
 					  )
 	@friends = @friends.paginate(:page => @page, :per_page => 50)
@@ -100,6 +101,7 @@ def orderasc
     @page = 1
     @friends=User.find(:all,
 					   :conditions =>[" age >0 "],
+					   :limit => 500,
 					   :order => " age asc "
 					  )
 	@friends = @friends.paginate(:page => @page, :per_page => 50)
