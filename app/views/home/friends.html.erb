@@ -7,7 +7,7 @@
   <% end %>
   &nbsp;
   <%if @friends.length > 1 && @page.to_i < @friends.total_pages then %>
-    <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+    <%= link_to "下一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
   <% end %>
 </center>
 </div>
@@ -45,7 +45,7 @@
   <% end %>
   &nbsp;
   <%if @friends.length > 1 && @page.to_i < @friends.total_pages then %>
-    <%= link_to "下一页", {:controller => :user, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
+    <%= link_to "下一页", {:controller => :home, :action => controller.action_name, :page => (@page.to_i + 1)}, {:class => "chn"} %>
   <% end %>
 </center>
 </div>
