@@ -11,10 +11,10 @@
   <% end %>
 </center>
 </div>
-<div style="width:800px;clear:both">
+
 
   <% @friends.each do |friend| %>
-  
+  <div style="width:800px;clear:both">
   <div style="text-align:center;padding:30px;float:left;width:100px;height:178px;background-image:url(http://fmn005.xnimg.cn/fmn005/pic001/20080808/08/27/large_161a65.jpg)">
     <xn:profile-pic uid="<%= friend.xid %>" size="normal" linked="true"/>
     <xn:name uid="<%= friend.xid %>" linked="true"/><br/><br>
@@ -35,9 +35,9 @@
     </span>
   </div>
  
-
-<% end %>
 </div>
+<% end %>
+
  <div>
  	<center>
   <%if @page.to_i > 1 then %>
@@ -49,7 +49,7 @@
   <% end %>
 </center>
 </div>
-<% else %><br>
+<% else %>
 <br>
 <br>
 
