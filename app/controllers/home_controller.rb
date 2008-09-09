@@ -86,7 +86,7 @@ def me
 end
  
 def orderdesc
-    @page = 1
+    @page = params[:page] || 1
     @friends = User.find(:all,
 					   :conditions =>[" age >0 "],
 					   :limit => 500,
@@ -98,7 +98,7 @@ def orderdesc
 end 
 
 def orderasc
-    @page = 1
+    @page = params[:page] || 1
     @friends=User.find(:all,
 					   :conditions =>[" age >0 "],
 					   :limit => 500,
